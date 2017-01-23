@@ -27,11 +27,12 @@ class Chart extends Component {
             ];
             return (
                 <div style={{width: '50%'}}>
-                    <BarChart ylabel='Number'
-                              width={500}
-                              height={500}
-                              margin={margin}
-                              data={barData}
+                    <BarChart
+                        ylabel='Number'
+                        width={500}
+                        height={500}
+                        margin={margin}
+                        data={barData}
                     />
                 </div>
             );

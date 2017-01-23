@@ -9,15 +9,37 @@ class App extends Component {
     constructor() {
         super();
         this.calculateResult = this.calculateResult.bind(this);
+        this.state = {
+            error: ''
+        };
     }
 
     calculateResult(values) {
-        this.props.calculateResult({ selectedValues: values });
+        if(Object.keys(values).length < this.props.questions.size) {
+            this.setState({
+                error: "Select all answers before submitting"
+            });
+        } else {
+            this.setState({
+                error: ""
+            });
+            this.props.calculateResult({ selectedValues: values });
+        }
     }
 
     render() {
         return (
             <div className="container">
+                <div className="section has-text-centered">
+                    <h1 className="title is-1">
+                        Cricket Trivia
+                    </h1>
+                </div>
+                <div>
+                    <h1 className="title is-4 danger has-text-centered">
+                        {this.state.error}
+                    </h1>
+                </div>
                 <div className="section">
                     <div className="columns">
                         <QuestionList

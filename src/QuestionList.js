@@ -63,7 +63,7 @@ function getQuestions(questions, props) {
 }
 
 function getOptions(question) {
-    const defaultOption = (<option key="'default">Chose Answer</option>);
+    const defaultOption = (<option key="'default">Choose Answer</option>);
     let returnObj = fromJS([]);
     returnObj = returnObj.push(defaultOption);
     question.get('options').forEach((option) => {
@@ -79,24 +79,6 @@ function getOptions(question) {
     return returnObj;
 }
 
-export function validate(formProps) {
-    const errors = {};
-    if (!formProps.Question1) {
-        errors.Question1 = 'Please enter a first name';
-    }
-    if (!formProps.Question2) {
-        errors.Question2 = 'Please enter a first name';
-    }
-    if (!formProps.Question3) {
-        errors.Question3 = 'Please enter a first name';
-    }
-    if (!formProps.Question0) {
-        errors.Question0 = 'Please enter a first name';
-    }
-    return errors;
-}
-
 export default reduxForm({
-    form: 'QuestionListForm',
-    validate
+    form: 'QuestionListForm'
 })(QuestionList);
