@@ -1,9 +1,14 @@
 export const constants = {
-    SAY_HELLO: 'SAY_HELLO'
+    CALCULATE_RESULT: 'CALCULATE_RESULT',
+    RESET_CHART: 'RESET_CHART'
 };
 
 export const actions = {
-    sayHello: () => ({
-        type: constants.SAY_HELLO
+    calculateResult: (payload) => ({
+        type: constants.CALCULATE_RESULT,
+        payload
+    }),
+    resetChart: () => ({
+        type: constants.RESET_CHART
     })
 };

@@ -2,7 +2,7 @@ import { fromJS } from 'immutable';
 import { getUUID } from './helpers';
 
 const data = fromJS({
-    qustions: [
+    questions: [
         {
             uuid: getUUID(),
             qText: 'When was the last time India won the Cricket World Cup ?',
@@ -17,7 +17,8 @@ const data = fromJS({
                 },
                 {
                     uuid: getUUID(),
-                    opText: '2011'
+                    opText: '2011',
+                    correct: true
                 },
                 {
                     uuid: getUUID(),
@@ -35,7 +36,8 @@ const data = fromJS({
                 },
                 {
                     uuid: getUUID(),
-                    opText: '400'
+                    opText: '400',
+                    correct: true
                 },
                 {
                     uuid: getUUID(),
@@ -61,7 +63,8 @@ const data = fromJS({
                 },
                 {
                     uuid: getUUID(),
-                    opText: 'Austrailia'
+                    opText: 'Australia',
+                    correct: true
                 },
                 {
                     uuid: getUUID(),
@@ -79,7 +82,8 @@ const data = fromJS({
                 },
                 {
                     uuid: getUUID(),
-                    opText: '100'
+                    opText: '100',
+                    correct: true
                 },
                 {
                     uuid: getUUID(),
